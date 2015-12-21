@@ -1,0 +1,41 @@
+KORI CARDA PUSPITA
+113750124
+
+
+1.SELECT nama , username, password from karyawan RIGHT JOIN user USING (nik) 
+  WHERE nama='KORI CARDA PUSPITA';
+
+
+2. SELECT nama_karyawan, total, status_jual, tanggal_update FROM 
+   RIGHT JOIN nama_karyawan USING (username)
+   WHERE tanggal_update='Oktober';
+
+
+3. SELECT nama, nama_barang, nama_jenis, harga_jual, harga_beli, stok, nama_suplier
+   FROM karyawan RIGHT JOIN barang RIGHT JOIN barang_jenis USING (kode_jenis) RIGHT JOIN  suplier
+   WHERE tanggal_trans_beli=20-10-2015 AND nama='KORI CARDA PUSPITA' AND nama_jenis='setrika';
+
+
+4. UPDATE user 
+   RIGHT JOIN karyawan USING (nik)
+   RIGHT JOIN user USING (kode)
+   SET nama='KORI CARDA PUSPITA'
+   WHERE username='KORI'
+   and password='amazing';
+
+5. UPDATE barang RIGHT JOIN barang_jenis USING (kode_jenis)
+   SET nama_barang='miyako' SET nama_jenis='magiccom' WHERE kode_jenis='lll999'
+
+
+6. DELETE 1137050124 AS karyawan FROM karyawan
+   RIGHT JOIN karyawan USING(nik) WHERE nama = 'KORI CARDA PUSPITA'; 
+
+
+7. DELETE nama FROM karyawan
+   RIGHT JOIN karyawan USING (nik)
+   WHERE nama='KORI CARDA PUSPITA);
+
+8. 
+
+
+

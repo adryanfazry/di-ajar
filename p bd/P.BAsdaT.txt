@@ -1,0 +1,74 @@
+169.254.162.44
+1fg
+1f05
+
+
+1
+4
+6
+8
+SELECT nama, kelas FROM `1137050123`, mahasiswa
+WHERE `1137050123` .nim = mahasiswa.`nim`
+
+inner join
+left join
+right join
+full join
+
+SELECT nama, kelas FROM `1137050123`, mahasiswa, mata_kuliah
+WHERE `1137050123` .nim = mahasiswa.`nim`
+AND `1137050123` .kode_mk = mata_kuliah.`kode_mk`
+
+SELECT nama, kelas FROM `1137050123`, JOIN mahasiswa
+ON `1137050123`.nim = mahasiswa.`nim` 
+
+perbedaan dan mana yang lebih cepat
+
+=============================================
+
+ipconfig
+ip : 10.166.54.41 / localhost
+username : KhrisnaRF
+password : KhrisnaRF
+
+
+CREATE USER 'username'@'host' IDENTIFIED BY 'password'
+
+CREATE USER 'KhrisnaRF'@'%' IDENTIFIED BY 'KhrisnaRF'
+
+select user, password, host from user
+
+
+GRANT , seperti create (hak akses)
+REVOKE, menghapus
+
+GRANT'permision'ON database.table TO'user'@'host' 
+GRANT'permision' (kolom) ON database.table TO'user'@'host' 
+
+GRANT CREATE, SELECT ON testifg.* TO'user'@'host' 
+
+GRANT CREATE, SELECT ON testifg.* TO'KhrisnaRF'@'%' 
+
+GRANT CREATE, SELECT, INSERT, DELETE, UPDATE ON testifg.* TO'KhrisnaRF'@'%' 
+
+REVOKE CREATE, SELECT ON testifg.*TO'KhrisnaRF'@'%'
+
+REVOKE CREATE, SELECT, DROP ON *TO'KhrisnaRF'@'%'  #untuk semua tabeL / DB
+
+SHOW GRANTS FOR'KhrisnaRF'@'%'
+
+
+
+
+buat USER nama sendiri dengan akses semua komputer
+hak akses SELECT dan DELETE untuk DATABASE testing
+
+UTS :  ++JOIN
+CREATE USER
+CREATE DATABASE
+GRANT
+
+
+bagaimana cara ketika kita lupa password di sqlyog (mengetahui password yang lupa di user sql)
+
+Tugaske-3_NIM
