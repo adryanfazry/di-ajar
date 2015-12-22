@@ -1,0 +1,12 @@
+IPv4 Address. . . . . . . . . . . : 10.166.54.157
+Subnet Mask . . . . . . . . . . . : 255.255.255.0
+Default Gateway . . . . . . . . . : 10.166.54.1
+
+CREATE USER 'adryan'@'%' IDENTIFIED BY 'amf'
+SELECT USER,PASSWORD, HOST FROM USER
+
+GRANT 'permision' ON database.table TO 'user'@'host'
+
+GRANT CREATE,SELECT,INSERT,DELETE,UPDATE ON tesifg.* TO 'adryan'@'%'
+
+REVOKE CREATE,SELECT,INSERT,DELETE,UPDATE ON tesifg.* TO 'adryan'@'%'

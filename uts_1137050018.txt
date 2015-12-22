@@ -1,0 +1,40 @@
+1. select nama, username, password from karyawan right join user on karyawan.nik = user.nik 
+where karyawan.nama = 'adryan'
+
+6. delete from karyawan right join where user on karyawan.nik= user.nik
+   where karyawan.nik = 1234
+
+7. delete from karyawan right join user on karyawan.nik=user.nik
+   right join trans_jual on karyawan.nik = trans_jual.username
+   right join trans_beli on karyawan.nik = trans_beli.username
+   where karyawan.nama='adryan'
+
+2. select karyawan.nama , tanggal_trans_jual, sub_total
+   from trans_jual right join user on trans_jual, username=user.username
+   right join user on user.nik = karyawan.nik
+   where trans_jual.tanggal_trans_jual="november"
+
+4. update user right join karyawan on user.nik=karyawan.nik
+   set nama = 'adryanmf'
+   where karyawan.alamat = 'komplek paledang indah'
+
+3. SELECT karyawan.nama, barang.nama_barang, barang_jenis.kode_jenis, detail_trans_jual.harga_jual, detail_trans_beli.harga_beli, barang.stok, suplier.nama_suplier
+   FROM barang RIGHT JOIN detail_trans_beli ON barang.kode_barang=detail_trans_beli.kode_barang
+   RIGHT JOIN barang_jenis ON user.nik=karyawan.nik
+   RIGHT JOIN karyawan ON user.nik=karyawan.nik
+   RIGHT JOIN trans_beli ON suplier.kode_suplier=trans_beli.kode_suplier
+   WHERE suplier.nama_suplier='Rival'
+   AND barang_jenis.nama_jenis='Kaos'
+   AND trans_jual.tanggal_trans_jual='25-10-2015'
+
+5. UPDATE detail_trans_beli RIGHT JOIN barang ON detail_trans_beli.kode_barang = kode_barang.barang
+   RIGHT JOIN barang_jenis ON barang.kode_jenis=barang_jenis.kode_jenis
+   RIGHT JOIN trans_beli ON detail_trans_beli.kode_trans_beli=trans_beli.kode_beli
+   RIGHT JOIN supplier ON supplier.kode_supplier=trans_beli.kode_supplier
+   SET barang.nama_barang='Kaos', barang_jenis.nama_jenis='pakaian'
+   WHERE supplier.nama_supplier='adryan'
+
+8. create user 'Adryanmf'@'% identified by 'Adryanmf'
+   grant create , select , delete , insert , update on inventory.*to'adryan'@'%'
+   revoke * on inventory.user to'adryan'@'%'
+   grant select, insert(nik,status,tanggal_update) on inventory.user to'adryan'@'%'
